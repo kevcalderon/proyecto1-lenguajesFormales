@@ -1,0 +1,30 @@
+digraph dibujo {
+	layout=dot rankdir=LR shape=circle
+	"Nombre: AFD1
+Estados: ['A', 'B', 'C', 'D']
+Estado inicial: A
+Estado aceptacion: ['C']
+Transiciones:
+A,1;B
+A,0;C
+B,1;A
+B,0;D
+C,1;D
+D,1;C
+C,0;A
+D,0;B
+" [shape=component]
+	A
+	B
+	C [shape=doublecircle]
+	D
+	Inicial -> A
+	A -> B [label=1]
+	A -> C [label=0]
+	B -> A [label=1]
+	B -> D [label=0]
+	C -> D [label=1]
+	D -> C [label=1]
+	C -> A [label=0]
+	D -> B [label=0]
+}

@@ -1,0 +1,32 @@
+digraph dibujo {
+	layout=dot rankdir=LR shape=circle
+	"Nombre: Gramatica1
+No Terminal: ['A', 'B', 'C', 'D']
+Terminal: ['0', '1']
+No Terminal inicial: A
+Producciones:
+A>1 B
+  |0 C
+B>1 A
+  |0 D
+C>1 D
+  |$ 
+  |0 A
+D>1 C
+  |0 B
+" [shape=component]
+	A
+	B
+	C
+	D
+	Inicial -> A
+	A -> B [label=1]
+	A -> C [label=0]
+	B -> A [label=1]
+	B -> D [label=0]
+	C -> D [label=1]
+	C [shape=doublecircle]
+	D -> C [label=1]
+	C -> A [label=0]
+	D -> B [label=0]
+}
